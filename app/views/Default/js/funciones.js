@@ -20,6 +20,19 @@ $(document).ready(function() {
 				return false;
 		});
 
+	
+	function cambiar(){
+	  $( "#mostrar" ).empty();
+	  var hits = document.getElementById('hits').value;
+	  var turnos = document.getElementById('turnos').value;
+	  if(hits==0||turnos==0){
+	  }else{
+	    var pro_bateo = hits/turnos;
+	    $( "#mostrar" ).append("Promedio de bateo: "+pro_bateo )
+	  }
+
+	}
+	
     $("#division").change(function() {
       $('#equipoL').find('option').remove();
       $('#equipoV').find('option').remove();
